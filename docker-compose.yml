@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+
+  grayscale:
+    build: grayscale-app
+    container_name: grayscale
+    volumes:
+      - ./appdata:/appdata
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  rotate:
+    build: rotate-app
+    container_name: rotate
+    volumes:
+      - ./appdata:/appdata
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  upload:
+    build: upload-app
+    container_name: upload
+    ports:
+      - 5000:5000
+    volumes:
+      - ./appdata:/appdata
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
