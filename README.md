@@ -1,6 +1,6 @@
 # Projeto usando padrão Publish/Subscribe (Flask + Docker + RabbitMQ)
 
-![image](https://user-images.githubusercontent.com/276077/162766448-13e0ebe8-8325-4e32-a8d7-5deff7744c10.png)
+<img width="1200" height="468" alt="162766448-13e0ebe8-8325-4e32-a8d7-5deff7744c10" src="https://github.com/user-attachments/assets/efd91ff6-5468-4b8b-a4b8-f54c4b195af9" />
 
 ## Pré-Requisitos: 
 | Instalação do [Docker](https://docs.docker.com/engine/install)
@@ -10,7 +10,7 @@
 
 Antes de começar, vamos entender alguns conceitos importantes sobre o PUB/SUB:
 
-* **Producer**: Aplicação cliente responsável por adicionar registros nos tópicos do Kafka.
+* **Producer**: Aplicação cliente responsável por adicionar registros nos tópicos do RabbitMQ.
 
 * **Consumer**: Aplicação que lê os tópicos. 
 
@@ -41,19 +41,6 @@ Ainda é possível analisar cada um dos logs gerados pelas aplicações no conta
 ```
 sudo docker logs -f
 ```
-
-
-
-Acessando o KafDrop em ```localhost:9000```
-
-> “Kafdrop is a web UI for viewing Kafka topics and browsing consumer groups. The tool displays information such as brokers, topics, partitions, consumers, and lets you view messages.” — [Kafdrop on GitHub](https://github.com/obsidiandynamics/kafdrop)
-
-![image](https://user-images.githubusercontent.com/276077/162105063-717094f5-5f10-478d-ac4b-3c20fd7350b2.png)
-
-Visualizando os tópicos
-
-![image](https://user-images.githubusercontent.com/276077/162105269-32fce2fd-363e-4393-85c2-951fd4ac9639.png)
-
 
 
 
