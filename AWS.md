@@ -4,9 +4,13 @@
 
 * Crie um ambiente no Cloud9 utilizando a instância `m5.large (8 GiB RAM + 2 vCPU)`.
 
-1. Copie o projeto pub-sub para o cloud9.
+1. Baixe o projeto pub-sub para o cloud9.
 
-2. Modifique a porta no qual a aplicação vai rodar. No docker-compose, mude a seguinte parte: 
+```bash
+wget https://github.com/rodrigoclira/pub-sub-rabbitmq/archive/refs/heads/main.zip
+```
+
+3. Modifique a porta na qual a aplicação vai rodar. No docker-compose, mude a seguinte parte: 
 
 **antigo**
 ```
@@ -55,7 +59,7 @@ sudo apt-get install docker-compose unzip nginx -y
 
 2. Download do repositório
 ```
-wget  https://github.com/rodrigoclira/devweb2/archive/refs/heads/main.zip
+wget  https://github.com/rodrigoclira/pub-sub-rabbitmq/archive/refs/heads/main.zip
 ```
 
 3. Descompactar repositório
