@@ -108,3 +108,4 @@ Ao terminar os experimentos, lembre-se de executar ```docker-compose down```
 ## Material Complementar
 
 [Arquitetura Publish/Subscribe](https://engsoftmoderna.info/cap7.html#arquiteturas-publishsubscribe)
+[O que é o RabbitMQ](https://www.youtube.com/watch?v=2YWHtbZJ0QI)
